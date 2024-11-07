@@ -1,3 +1,25 @@
-.logo{
-    width: 30px;
+.logo {
+    width: 150px;
+    margin: 2px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+
+.rightSide {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-right: 300px;
+    color: white;
+    font-size: large;
+}
+
+
+.rightSide>div {
+    margin: 15px;
 }
