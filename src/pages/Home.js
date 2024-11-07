@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import RandomFilm from '../components/filmAleatoire';
 
-function Home() {
+const Home = () => {
     return (
         <div>
-            Test Test Test
+            <filmAleatoire />
         </div>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;

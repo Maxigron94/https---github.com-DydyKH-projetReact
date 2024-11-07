@@ -1,0 +1,47 @@
+body{
+    margin: 0!important;
+}
+
+.background {
+    position: relative;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+
+#backgroundImg {
+    background-image: url(./assets/back.jpg);
+}
+
+.logo {
+    width: 175px;
+    margin: 2px;
+}
+
+.navbar {
+    display: flex;
+    margin-top: 17px;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.rightSide {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-right: 300px;
+    color: white;
+    font-size: large;
+}
+
+.rightSide>div {
+    margin: 15px;
+}
+
+
+.bordureColorer {
+    border:2px solid red;
+    height: 100%;
+    bottom:0%;
+}
