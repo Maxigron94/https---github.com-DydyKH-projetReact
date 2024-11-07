@@ -8,7 +8,7 @@ function Navbar() {
             <div className='leftSide'>
                 <img src={Logo} />
             </div>
-            <div className='rightSide'></div>
+            <div className='rightSide'>Navbar</div>
 
         </div>
     )
