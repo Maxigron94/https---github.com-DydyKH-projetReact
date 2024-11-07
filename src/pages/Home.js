@@ -4,7 +4,9 @@ import filmAleatoire from '../components/filmAleatoire';
 const Home = () => {
     return (
         <div>
+
             <filmAleatoire />
+
         </div>
     );
 };
