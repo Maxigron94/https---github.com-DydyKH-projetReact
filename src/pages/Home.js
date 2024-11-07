@@ -1,11 +1,11 @@
 import React from 'react';
-import filmAleatoire from '../components/filmAleatoire';
+import RandomFilm from '../components/RandomFilm';
 
 const Home = () => {
     return (
         <div>
 
-            <filmAleatoire />
+            <RandomFilm />
 
         </div>
     );
