@@ -1,5 +1,5 @@
 import React from 'react';
-import RandomFilm from '../components/filmAleatoire';
+import filmAleatoire from '../components/filmAleatoire';
 
 const Home = () => {
     return (
