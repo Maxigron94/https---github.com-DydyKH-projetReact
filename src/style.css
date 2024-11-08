@@ -14,6 +14,7 @@ body{
     background-image: url(./assets/back.jpg);
 }
 
+/**============== NAVBAR ==============**/
 .logo {
     width: 175px;
     margin: 2px;
@@ -37,4 +38,9 @@ body{
 
 .rightSide>div {
     margin: 15px;
+}
+
+/**============== FOOTER ==============**/
+#footer>.logo {
+    width: 100px;
 }

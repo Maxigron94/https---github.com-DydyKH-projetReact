@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <div className="navbar">
             <div className='leftSide'>
-                <img src={Logo} alt="Test" className='logo' />
+                <img src={Logo} alt="Logo" className='logo' />
             </div>
             <div className='rightSide'>
                 <div>Accueil</div>
