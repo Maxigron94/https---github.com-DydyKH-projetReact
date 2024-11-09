@@ -14,8 +14,11 @@ body {
     background-image: url(./assets/back.jpg);
 }
 
-
-/* Navbar */
+/**============== NAVBAR ==============**/
+.logo {
+    width: 175px;
+    margin: 2px;
+}
 
 .navbar {
     width: 100%;
@@ -86,6 +89,11 @@ body {
 .navbar #open a {
     width: 70px;
     margin: 5px;
+}
+
+/**============== FOOTER ==============**/
+#footer>.logo {
+    width: 100px;
 }
 
 @media only screen and (max-width: 900px) {
