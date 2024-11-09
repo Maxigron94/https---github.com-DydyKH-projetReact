@@ -10,9 +10,9 @@ body {
     min-height: 100%;
 }
 
-#backgroundImg {
+/* #backgroundImg {
     background-image: url(./assets/back.jpg);
-}
+} */
 
 /**============== NAVBAR ==============**/
 .logo {
@@ -37,7 +37,7 @@ body {
 }
 
 .navbar .leftSide img {
-    width: 70px;
+    width: 100px;
 }
 
 .navbar .rightSide {
