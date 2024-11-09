@@ -17,7 +17,7 @@ function App() {
           <Route path="/catalogue" exact element={<Catalogue />} />
 
         </Routes>
-        <Footer />
+        <Footer/>
       </Router>
 
     </div>
