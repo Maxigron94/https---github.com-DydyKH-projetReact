@@ -92,6 +92,10 @@ body {
 }
 
 /**============== FOOTER ==============**/
+#footer {
+    background-color: #121619;
+}
+
 #footer>.logo {
     width: 100px;
 }
