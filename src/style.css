@@ -15,11 +15,6 @@ body {
 } */
 
 /**============== NAVBAR ==============**/
-.logo {
-    width: 175px;
-    margin: 2px;
-}
-
 .navbar {
     width: 100%;
     height: 100px;
@@ -94,10 +89,22 @@ body {
 /**============== FOOTER ==============**/
 #footer {
     background-color: #121619;
+    color: #FFF;
+    padding: 10px;
 }
 
-#footer>.logo {
-    width: 100px;
+.flexible> div:last-of-type .logo {
+    width: 110px;
+}
+
+.flexible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexible>div {
+    margin: 0 5px 0 5px;
 }
 
 @media only screen and (max-width: 900px) {
