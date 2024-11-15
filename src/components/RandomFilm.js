@@ -1,41 +1,46 @@
+// RandomFilm.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const RandomFilm = () => {
-    //Récupérer les films
-    const [cinemas, setCinemas] = useState([]);
     const [selectedFilm, setSelectedFilm] = useState(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get('http://localhost:5000/api/cinema');
-                setCinemas(response.data);
-            } catch (error) {
-                console.error('Error fetching the cinema data:', error);
-            }
-        };
-
-        fetchData();
-    }, []);
-
-    //choisir le film random
-    const getRandomFilm = () => {
-        const randomIndex = Math.floor(Math.random() * cinemas.length);
-        setSelectedFilm(cinemas[randomIndex]);
+    // Fonction pour récupérer un film aléatoire
+    const getRandomFilm = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/api/FilmRandom');
+            setSelectedFilm(response.data);
+        } catch (error) {
+            console.error('Error fetching the random film:', error);
+        }
     };
 
+    // Charger un film aléatoire au chargement de la page
+    useEffect(() => {
+        getRandomFilm();
+    }, []);
+
     return (
-        <div>
-            <button onClick={getRandomFilm}>Film aléatoire</button>
+        <div class="containerFRP">
+            <button class="boutonFR" onClick={getRandomFilm}>Trouvez votre film!</button>
             {selectedFilm && (
-                <div>
-                    <h2>{selectedFilm.Nom}</h2>
-                    <p>{selectedFilm.Date}</p>
-                    <p>{selectedFilm.Genre1}, {selectedFilm.Genre2}</p>
-                    <p>{selectedFilm.Realisateur}</p>
-                    <p>{selectedFilm.Synopsis}</p>
-                </div>
+                <section class="containerFR">
+                    <div class="containerImageFR"> 
+                    <img class="imgFR" src={selectedFilm.Image} alt={selectedFilm.Nom} />
+                    </div>
+                    <div class="containerInformationFR">
+                        <p class="nomFR">{selectedFilm.Nom}</p>
+                        <p class="dateFR">{selectedFilm.Annee} - {selectedFilm.Duree} - {selectedFilm.Classification}</p>
+                        <p class="noteFR">Note: {selectedFilm.Note} {selectedFilm.Voteur} - Metascore: {selectedFilm.NoteMeta}</p>
+                        <p class="auteurFR">De: {selectedFilm.Realisateur}</p>
+                        <p class="acteurFR">Acteurs: {selectedFilm.Acteur1}, {selectedFilm.Acteur2}, {selectedFilm.Acteur3}</p>
+                    </div>
+                    <div class="containerSynopsisFR"> 
+                        <p>{selectedFilm.Synopsis}</p>
+                    </div>
+                    
+                    
+                </section>
             )}
         </div>
     );
