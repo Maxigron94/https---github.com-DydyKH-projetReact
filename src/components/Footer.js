@@ -6,7 +6,7 @@ function Footer() {
     <div id="footer">
       <div className="flexible">
           <div>
-              <p>© MovieMaf - Tous droits réservés</p>
+              <p>© MovieMAF - Tous droits réservés</p>
           </div>
           <div>
               <img src={Logo} alt="logo footer" className='logo'/>
