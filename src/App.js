@@ -18,6 +18,8 @@ function App() {
           <Route path="/catalogue" exact element={<Catalogue />} />
           <Route path="/equipe" exact element={<Equipe />} />
 
+
+
         </Routes>
         <Footer />
       </Router>
