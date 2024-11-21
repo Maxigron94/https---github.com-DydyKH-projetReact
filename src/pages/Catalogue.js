@@ -1,43 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import BannerImage from "../assets/back.jpg";
 import "../styles/Catalogue.css";
 
 function Catalogue() {
-
     const containers = [
         "Conteneur 1", "Conteneur 2", "Conteneur 3", "Conteneur 4",
         "Conteneur 5", "Conteneur 6", "Conteneur 7", "Conteneur 8",
         "Conteneur 9", "Conteneur 10", "Conteneur 11", "Conteneur 12"
     ];
 
-    // Nombre de conteneurs affichés par page
-    const containersPerPage = 6;
-
-    // État pour la page actuelle
+    const containersPerPage = 3;
     const [currentPage, setCurrentPage] = useState(1);
-
-    // Calculer les indices des conteneurs à afficher en fonction de la page
     const indexOfLastContainer = currentPage * containersPerPage;
     const indexOfFirstContainer = indexOfLastContainer - containersPerPage;
     const currentContainers = containers.slice(indexOfFirstContainer, indexOfLastContainer);
+    const totalPages = Math.ceil(containers.length / containersPerPage);
 
-    // Changer de page
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
 
-    // Calculer le nombre total de pages
-    const totalPages = Math.ceil(containers.length / containersPerPage);
-
     return (
         <div className="catalogue" style={{ backgroundImage: `url(${BannerImage})` }}>
-            <h2>Page Catalogue</h2>
+            <h2 className="h2Catalogue">Page Catalogue</h2>
 
             <div className="film-container">
                 {currentContainers.map((container, index) => (
-                    <div key={index} className="film">
+                    <Link
+                        key={index}
+                        to={`/detail/${index + 1}`}
+                        className="film"
+                    >
                         {container}
-                    </div>
+                    </Link>
                 ))}
             </div>
 

@@ -17,7 +17,7 @@
     justify-content: center;
     gap: 10px;
     margin-left: 35%;
-    margin-bottom: 4%;
+
 }
 
 .film {
@@ -33,10 +33,12 @@
 }
 
 .pagination {
-    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: center;
     gap: 10px;
+    padding-bottom: 10%;
 }
 
 .pagination button {
@@ -48,10 +50,18 @@
 }
 
 .pagination button.active {
-    background-color: #4caf50;
+    background-color: black;
     color: white;
 }
 
 .pagination button:hover {
     background-color: #ddd;
+}
+
+.h2Catalogue {
+    position: absolute;
+    top: 0;
+    padding-top: 8%;
+    width: 100%;
+    text-align: center;
 }
