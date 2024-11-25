@@ -1,48 +1,55 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import BannerImage from "../assets/back.jpg";
+import BannerImage from "../assets/catalogueback.jpg";
+import axios from 'axios';
 import "../styles/Catalogue.css";
 
 function Catalogue() {
-    const containers = [
-        "Conteneur 1", "Conteneur 2", "Conteneur 3", "Conteneur 4",
-        "Conteneur 5", "Conteneur 6", "Conteneur 7", "Conteneur 8",
-        "Conteneur 9", "Conteneur 10", "Conteneur 11", "Conteneur 12"
-    ];
+    const [films, setFilms] = useState([]);
+    const [currentPage, setCurrentPage] = useState(0);
+    const totalPages = 5;
 
-    const containersPerPage = 3;
-    const [currentPage, setCurrentPage] = useState(1);
-    const indexOfLastContainer = currentPage * containersPerPage;
-    const indexOfFirstContainer = indexOfLastContainer - containersPerPage;
-    const currentContainers = containers.slice(indexOfFirstContainer, indexOfLastContainer);
-    const totalPages = Math.ceil(containers.length / containersPerPage);
+    useEffect(() => {
+        const fetchFilms = async () => {
+            try {
+                const response = await axios.get(`http://localhost:5000/api/films?index=${currentPage}`);
+                setFilms(response.data);
+            } catch (error) {
+                console.error("Erreur lors de la récupération des films:", error);
+            }
+        };
+        fetchFilms();
+    }, [currentPage]);
 
     const handlePageChange = (pageNumber) => {
-        setCurrentPage(pageNumber);
+        setCurrentPage(pageNumber - 1);
     };
 
     return (
         <div className="catalogue" style={{ backgroundImage: `url(${BannerImage})` }}>
-            <h2 className="h2Catalogue">Page Catalogue</h2>
+            <h2 className="h2Catalogue">Notre top 50</h2>
 
-            <div className="film-container">
-                {currentContainers.map((container, index) => (
-                    <Link
-                        key={index}
-                        to={`/detail/${index + 1}`}
-                        className="film"
-                    >
-                        {container}
-                    </Link>
-                ))}
+            <div class="film-container2">
+                <div className="film-container">
+                    {films.map((film, index) => (
+                        <Link
+                            key={index}
+                            to={`/detail/${film._id}`} // Utilisation de l'ID du film pour le lien
+                            className="film"
+                            style={{ backgroundImage: `url(${film.Image})` }}
+                        >
+                        </Link>
+                    ))}
+                </div>
             </div>
+            
 
             <div className="pagination">
                 {Array.from({ length: totalPages }, (_, index) => (
                     <button
                         key={index + 1}
                         onClick={() => handlePageChange(index + 1)}
-                        className={currentPage === index + 1 ? "active" : ""}
+                        className={currentPage === index ? "active" : ""}
                     >
                         {index + 1}
                     </button>

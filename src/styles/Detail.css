@@ -1,4 +1,6 @@
 .detail {
+    border:2px solid blue;
+    color:white;
     width: 100%;
     height: 80vh;
     display: flex;
@@ -9,4 +11,42 @@
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container-boutonReturnCatalogue{
+    border:1px solid red;
+}
+
+.container-boutonReturnCatalogue button{
+}
+
+.container-boutonReturnCatalogue button:hover{
+    cursor: pointer;
+}
+
+.container-filmInformation{
+    border:1px solid green;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.container-imageInformation{
+    border:1px solid yellow;
+    width: 33%;
+    height: 300px;
+}
+
+.container-bodyInformation {
+    border:1px solid lightblue;
+    width: 66%;
+}
+
+.container-synopsisInformation{
+    border:1px solid red;
+    width: 100%;
+}
+
+.container-footerInformation{
+    border:1px solid green;
+    width: 100%;
 }
