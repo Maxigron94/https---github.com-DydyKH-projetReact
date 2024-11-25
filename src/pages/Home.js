@@ -7,11 +7,7 @@ import "../styles/Home.css";
 const Home = () => {
     return (
         
-        <div className="home" >
-            <div className="headerContainer">
-                
-            </div>
-
+        <div className="home">
             <div class="homeContainer" style={{ backgroundImage: `url(${BannerImage})` }}>
                 <RandomFilm />
             </div>
