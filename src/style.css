@@ -66,6 +66,193 @@ body {
     padding-left: 0px;
 }
 
+
+.rightSide>div {
+    margin: 15px;
+}
+
+/**============== FILM RANDOM ==============**/
+.bordureColorer {
+    height: 100%;
+    bottom:0%;
+}
+
+.containerFRP{
+    height: 641px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerFRTitre{
+    width: 100%;
+    height: 120px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerFRTitre h1{
+    margin:0px;
+    padding: 5px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    height: 60px;
+    font-weight: 40;
+
+    width: 50%;
+}
+
+.containerFRTitre p{
+    margin:0px;
+    padding: 5px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 20;
+
+    width: 33%;
+}
+
+.containerFRSectionRandom {
+    width: 100%;
+    height: 521px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerFRB {
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-bottom: 140px;
+    margin-left: 120px;
+}
+
+.boutonFR{
+    width: 200px;
+    height: 50px;
+    margin:20px;
+    background-color: black ;
+    box-shadow: 0 0 10px 5px white;
+    color:white;
+    border-radius: 5px;
+}
+
+.boutonFR:hover{
+    color:black;
+    transition: 0.2s ease-in;
+    background-color: whitesmoke ;
+    cursor: pointer;
+}
+
+.containerFR{
+    width: 30%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(94, 94, 94,0.9);
+    padding: 15px;
+    border-radius:5px;
+    box-shadow: 0 0 10px 5px black;
+    margin-right: 40px;
+    margin-bottom: 150px;
+}
+
+.containerImageFR{
+    width: 49%;
+    height: 170px;
+    margin:1px;
+    background-color: rgba(202, 202, 202,0.7);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px white;
+    
+}
+
+.imgFR{
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
+}
+
+.containerInformationFR{
+    width: 49%;
+    height: 170px;
+    margin:1px;
+    background-color: rgba(202, 202, 202,0.7);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px white;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.nomFR{
+    color:black;
+    width: 100%;
+    text-align: start;
+    margin-top: 3px;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+.dateFR{
+    width: 100%;
+    text-align: start;
+    margin-top: 0;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+.genreFR{
+    width: 100%;
+    text-align: start;
+    margin-top: 3px;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+.auteurFR{
+    width: 100%;
+    text-align: start;
+    margin-top: 3px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+.acteurFR{
+    text-align: start;
+    margin-top:0;
+    margin-left:5px;
+    margin-bottom: 0;
+}
+
+.noteFR{
+    width: 100%;
+    text-align: start;
+    margin-top: 0;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+
+
+.containerSynopsisFR{
+    width: 100%;
+    margin:3px;
+    height: auto;
+    background-color: rgba(202, 202, 202,0.7);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px white;
+}
+
+
+  /**============== NAV ==============**/
 .navbar #open img {
     display: none;
 }
@@ -202,4 +389,5 @@ body {
     .hiddenLinks {
         display: none;
     }
+
 }
