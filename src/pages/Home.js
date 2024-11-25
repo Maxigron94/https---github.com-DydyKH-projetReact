@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import BannerImage from "../assets/back.jpg";
 import "../styles/Home.css";
 
-function Home() {
+
+const Home = () => {
     return (
+
         <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
             <div className="headerContainer">
 
@@ -17,9 +19,8 @@ function Home() {
                 </Link>
 
             </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;
