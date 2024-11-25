@@ -22,6 +22,7 @@ body {
     background-color: #121619;
     display: flex;
     flex-direction: row;
+    z-index: 10;
 }
 
 .navbar .leftSide {
@@ -94,7 +95,7 @@ body {
     padding: 10px;
 }
 
-.flexible> div:last-of-type .logo {
+.flexible>div:last-of-type .logo {
     width: 110px;
 }
 
@@ -109,7 +110,7 @@ body {
 }
 
 /**============== EQUIPE ==============**/
-#equipe>h1{
+#equipe>h1 {
     text-align: center;
 }
 
@@ -132,7 +133,7 @@ body {
 
 .overlay {
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -143,7 +144,7 @@ body {
     background-color: cadetblue;
 }
 
-.container:hover .overlay{
+.container:hover .overlay {
     opacity: 1;
 }
 
