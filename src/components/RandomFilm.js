@@ -1,5 +1,6 @@
 // RandomFilm.js
 import React, { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 import axios from 'axios';
 
 const RandomFilm = () => {
@@ -22,8 +23,21 @@ const RandomFilm = () => {
 
     return (
         <div class="containerFRP">
-            <button class="boutonFR" onClick={getRandomFilm}>Trouvez votre film!</button>
-            {selectedFilm && (
+            <div class="containerFRTitre">
+                <h1>Site de films judiciaires</h1>
+                <p>Une collection bien appréciée</p>
+            </div>
+            <div class="containerFRSectionRandom">
+                <div class="containerFRB"> 
+                    <button class="boutonFR" onClick={getRandomFilm}>Trouvez votre film!</button>
+                    <Link to="/catalogue">
+                        <button class="boutonFR">
+                            Consulter les films disponibles
+                        </button>
+                    </Link>
+                </div>
+
+                {selectedFilm && (
                 <section class="containerFR">
                     <div class="containerImageFR"> 
                     <img class="imgFR" src={selectedFilm.Image} alt={selectedFilm.Nom} />
@@ -38,10 +52,12 @@ const RandomFilm = () => {
                     <div class="containerSynopsisFR"> 
                         <p>{selectedFilm.Synopsis}</p>
                     </div>
-                    
-                    
                 </section>
             )}
+            </div>
+            
+            
+            
         </div>
     );
 };

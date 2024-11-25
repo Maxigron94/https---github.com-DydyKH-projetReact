@@ -1,23 +1,19 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import BannerImage from "../assets/back.jpg";
+import RandomFilm from '../components/RandomFilm';
+import BannerImage from "../assets/back2.jpg";
 import "../styles/Home.css";
 
 
 const Home = () => {
     return (
-
-        <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
+        
+        <div className="home" >
             <div className="headerContainer">
+                
+            </div>
 
-                <h1>Site de films judiciaires</h1>
-                <p>Une collection bien appréciée</p>
-                <Link to="/catalogue">
-                    <button>
-                        Consulter les films disponibles
-                    </button>
-                </Link>
-
+            <div class="homeContainer" style={{ backgroundImage: `url(${BannerImage})` }}>
+                <RandomFilm />
             </div>
         </div>
     );
