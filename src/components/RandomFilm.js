@@ -22,34 +22,34 @@ const RandomFilm = () => {
     }, []);
 
     return (
-        <div class="containerFRP">
-            <div class="containerFRTitre">
-                <h1>Site de films judiciaires</h1>
-                <p>Une collection bien appréciée</p>
+        <div className="containerFRP">
+            <div className="containerFRTitre">
+                <h1>Top 50 des films incontournable</h1>
+                <p>Une collection a ne pas manquer !</p>
             </div>
-            <div class="containerFRSectionRandom">
-                <div class="containerFRB"> 
-                    <button class="boutonFR" onClick={getRandomFilm}>Trouvez votre film!</button>
+            <div className="containerFRSectionRandom">
+                <div className="containerFRB"> 
+                    <button className="boutonFR" onClick={getRandomFilm}>Trouvez votre film!</button>
                     <Link to="/catalogue">
-                        <button class="boutonFR">
+                        <button className="boutonFR">
                             Consulter les films disponibles
                         </button>
                     </Link>
                 </div>
 
                 {selectedFilm && (
-                <section class="containerFR">
-                    <div class="containerImageFR"> 
-                    <img class="imgFR" src={selectedFilm.Image} alt={selectedFilm.Nom} />
+                <section className="containerFR">
+                    <div className="containerImageFR"> 
+                    <img className="imgFR" src={selectedFilm.Image} alt={selectedFilm.Nom} />
                     </div>
-                    <div class="containerInformationFR">
-                        <p class="nomFR">{selectedFilm.Nom}</p>
-                        <p class="dateFR">{selectedFilm.Annee} - {selectedFilm.Duree} - {selectedFilm.Classification}</p>
-                        <p class="noteFR">Note: {selectedFilm.Note} {selectedFilm.Voteur} - Metascore: {selectedFilm.NoteMeta}</p>
-                        <p class="auteurFR">De: {selectedFilm.Realisateur}</p>
-                        <p class="acteurFR">Acteurs: {selectedFilm.Acteur1}, {selectedFilm.Acteur2}, {selectedFilm.Acteur3}</p>
+                    <div className="containerInformationFR">
+                        <p className="nomFR">{selectedFilm.Nom}</p>
+                        <p className="dateFR">{selectedFilm.Annee} - {selectedFilm.Duree} - {selectedFilm.classification}</p>
+                        <p className="noteFR">Note: {selectedFilm.Note} {selectedFilm.Voteur} - Metascore: {selectedFilm.NoteMeta}</p>
+                        <p className="auteurFR">De: {selectedFilm.Realisateur}</p>
+                        <p className="acteurFR">Acteurs: {selectedFilm.Acteur1}, {selectedFilm.Acteur2}, {selectedFilm.Acteur3}</p>
                     </div>
-                    <div class="containerSynopsisFR"> 
+                    <div className="containerSynopsisFR"> 
                         <p>{selectedFilm.Synopsis}</p>
                     </div>
                 </section>
