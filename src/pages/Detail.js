@@ -27,29 +27,32 @@ function Detail() {
 
     return (
         <div className="detail" style={{ backgroundImage: `url(${BannerImage})` }}>
-            <section className="container-boutonReturnCatalogue">
-                <Link to="/catalogue"> <button>Retour</button> </Link>
-            </section>
-            <section class="container-filmInformation">
-                <div class="container-imageInformation">
+            <section className="container-filmInformation">
+                <div className="container-imageInformation">
                     <img src={film.Image} alt={film.Nom} />
                 </div>
 
-                <div class="container-bodyInformation">
-                    <p class="">{film.Nom}</p>
-                    <p class="">{film.Annee} - {film.Duree} - {film.Classification}</p>
-                    <p class="">Note: {film.Note} {film.Voteur} - Metascore: {film.NoteMeta}</p>
-                    <p class="">De: {film.Realisateur}</p>
-                    <p class="">Acteurs: {film.Acteur1}, {film.Acteur2}, {film.Acteur3}</p>
+                <div className="container-bodyInformation">
+                    <h1 className="">{film.Nom}</h1>
+                    <h2 className="">{film.Annee} - {film.Duree} - {film.Classification}</h2>
+                    <p className=""><b>Note :</b> {film.Note} {film.Voteur} - Metascore : {film.NoteMeta}</p>
+                    <p className=""><b>Réalisateur :</b> {film.Realisateur}</p>
+                    <p className=""><b>Acteurs :</b> {film.Acteur1}, {film.Acteur2}, {film.Acteur3}</p>
+
+                    <div className="container-synopsisInformation">
+                        <h3>Synopsis :</h3>
+                        <p>{film.Synopsis}</p>
+                    </div>
                 </div>
 
-                <div class="container-synopsisInformation">
-                    <p>{film.Synopsis}</p>
-                </div>
+                
 
-                <div class="container-footerInformation">
+                <div className="container-footerInformation">
                     <a href={film.LienFilm} target="_blank" rel="noopener noreferrer">Voir le film</a>
                 </div>
+                <section className="container-boutonReturnCatalogue">
+                    <Link to="/catalogue"> <button>Retour</button> </Link>
+                </section>
             </section>
             
         </div>

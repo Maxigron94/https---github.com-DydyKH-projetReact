@@ -29,7 +29,7 @@ function Catalogue() {
         <div className="catalogue" style={{ backgroundImage: `url(${BannerImage})` }}>
             <h2 className="h2Catalogue">Notre top 50</h2>
 
-            <div class="film-container2">
+            <div className="film-container2">
                 <div className="film-container">
                     {films.map((film, index) => (
                         <Link
