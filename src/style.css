@@ -74,74 +74,74 @@ body {
 
 .bordureColorer {
     height: 100%;
-    bottom:0%;
+    bottom: 0%;
 }
 
-.containerFRP{
+.containerFRP {
     height: 460px;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.boutonFR{
+.boutonFR {
     margin-left: 120px;
     margin-bottom: 15px;
     height: 50px;
-    background-color: lightcyan ;
+    background-color: lightcyan;
     box-shadow: 0 0 10px 5px white;
 
 }
 
-.boutonFR:hover{
-    background-color: lightyellow ;
-    border:2px solid lightgreen;
+.boutonFR:hover {
+    background-color: lightyellow;
+    border: 2px solid lightgreen;
     cursor: pointer;
     border-radius: 5px;
 }
 
-.containerFR{
+.containerFR {
     width: 30%;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgba(94, 94, 94,0.9);
+    background-color: rgba(94, 94, 94, 0.9);
     padding: 15px;
-    border-radius:5px;
+    border-radius: 5px;
     box-shadow: 0 0 10px 5px black;
     margin-right: 115px;
 }
 
-.containerImageFR{
+.containerImageFR {
     width: 49%;
     height: 170px;
-    margin:1px;
-    background-color: rgba(202, 202, 202,0.7);
+    margin: 1px;
+    background-color: rgba(202, 202, 202, 0.7);
     border-radius: 5px;
     box-shadow: 0 0 10px 5px white;
-    
+
 }
 
-.imgFR{
+.imgFR {
     width: 100%;
     height: 100%;
-    object-fit:scale-down;
+    object-fit: scale-down;
 }
 
-.containerInformationFR{
+.containerInformationFR {
     width: 49%;
     height: 170px;
-    margin:1px;
-    background-color: rgba(202, 202, 202,0.7);
+    margin: 1px;
+    background-color: rgba(202, 202, 202, 0.7);
     border-radius: 5px;
     box-shadow: 0 0 10px 5px white;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
 }
 
-.nomFR{
-    color:red;
+.nomFR {
+    color: red;
     width: 100%;
     text-align: start;
     margin-top: 3px;
@@ -149,7 +149,7 @@ body {
     margin-bottom: 0;
 }
 
-.dateFR{
+.dateFR {
     width: 100%;
     text-align: start;
     margin-top: 0;
@@ -157,28 +157,30 @@ body {
     margin-bottom: 0;
 }
 
-.genreFR{
+.genreFR {
     width: 100%;
     text-align: start;
     margin-top: 3px;
     margin-left: 5px;
     margin-bottom: 0;
 }
-.auteurFR{
+
+.auteurFR {
     width: 100%;
     text-align: start;
     margin-top: 3px;
     margin-left: 5px;
     margin-bottom: 3px;
 }
-.acteurFR{
+
+.acteurFR {
     text-align: start;
-    margin-top:0;
-    margin-left:5px;
+    margin-top: 0;
+    margin-left: 5px;
     margin-bottom: 0;
 }
 
-.noteFR{
+.noteFR {
     width: 100%;
     text-align: start;
     margin-top: 0;
@@ -188,15 +190,15 @@ body {
 
 
 
-.containerSynopsisFR{
+.containerSynopsisFR {
     width: 100%;
-    margin:3px;
+    margin: 3px;
     height: auto;
-    background-color: rgba(202, 202, 202,0.7);
+    background-color: rgba(202, 202, 202, 0.7);
     border-radius: 5px;
     box-shadow: 0 0 10px 5px white;
-  
-  
+}
+
 .navbar #open img {
     display: none;
 }
