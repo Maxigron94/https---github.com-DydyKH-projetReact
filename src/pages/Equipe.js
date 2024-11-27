@@ -6,7 +6,7 @@ import maxime from "../assets/m.jpeg";
 function Equipe() {
     return (
         <div id='equipe'>
-            <h1>Une équipe qui va vous exposer tous les faits !</h1>
+            <h1>Une équipe qui s'y connait en matière de film ! On peut vous l'assurez !</h1>
             <div>
                 <div className='container'>
                     <img className="avatar" src={audy} alt="Himiko Toga" />
@@ -27,7 +27,7 @@ function Equipe() {
                             <h2>Felix Laventure</h2>
                             <ul>
                                 <li>Développeur PROfessionel</li>
-                                <li>La personne qui a souffert pour lier la bd avec React</li>
+                                <li>La personne qui a souffert pour lier la BD avec React</li>
                             </ul>
                         </div>
                     </div>
@@ -39,7 +39,7 @@ function Equipe() {
                             <h2>Maxime Grondin</h2>
                             <ul>
                                 <li>Chef de projet</li>
-                                <li>La personne qui dirige le projet MovieMAF</li>
+                                <li>Le singe qui dirige le projet MovieMAF</li>
                             </ul>
                         </div>
                     </div>

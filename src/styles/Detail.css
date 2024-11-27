@@ -1,5 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 .detail {
-    width: 100%;
+    /* border:2px solid blue; */
+    color:white;
+    max-width: 100%;
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -9,4 +15,88 @@
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container-boutonReturnCatalogue{
+    /* border:1px solid red; */
+    border: 2px solid white;
+    width: 80%;
+}
+
+.container-boutonReturnCatalogue button{
+    min-width: 100%;
+    height: 100%;
+    font-size: large;
+    font-weight: bold;
+}
+
+.container-boutonReturnCatalogue button:hover{
+    cursor: pointer;
+    background-color: CadetBlue;
+}
+
+.container-filmInformation{
+    border:2px solid white;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.container-imageInformation{
+    /* border:1px solid yellow; */
+    width: 20%;
+    /* height: 300px; */
+    border: 2px solid white;
+}
+
+.container-imageInformation img {
+    width: 100%;
+    min-height: 100%;
+}
+
+.container-bodyInformation {
+    /* border:1px solid lightblue; */
+    width: 80%;
+    padding-left: 10px;
+}
+
+.container-bodyInformation h1 {
+    font-size:30px;
+    color: CadetBlue;
+}
+
+.container-bodyInformation h2 {
+    font-size:20px;
+}
+
+.container-bodyInformation h3 {
+    font-size:18px;
+}
+
+.container-bodyInformation p {
+    font-size: large;
+}
+
+.container-synopsisInformation{
+    /* border:1px solid red; */
+    margin-top: 11%;
+    width: 100%;
+}
+
+.container-synopsisInformation p {
+    font-style: italic;
+}
+
+.container-footerInformation {
+    /* border:1px solid green; */
+    border-right: 2px solid white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 2px;
+    width: 20%;
+    text-align: center;
+}
+
+.container-footerInformation a {
+    font-size: large;
+    font-weight: bold;
 }

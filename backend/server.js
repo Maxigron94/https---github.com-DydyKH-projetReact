@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -42,6 +41,32 @@ app.get('/api/FilmRandom', async (req, res) => {
         const random = Math.floor(Math.random() * count);
         const randomFilm = await top50.findOne().skip(random);
         res.json(randomFilm);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+app.get('/api/films', async (req, res) => {
+    try {
+        const { index } = req.query;
+        const pageIndex = parseInt(index, 10);
+        const limit = 10;
+        const skip = pageIndex * limit;
+
+        const films = await top50.find({}, { Image: 1 }).skip(skip).limit(limit);
+        res.json(films);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+app.get('/api/films/:id', async (req, res) => {
+    try {
+        const film = await top50.findById(req.params.id);
+        if (!film) {
+            return res.status(404).json({ message: "Film introuvable" });
+        }
+        res.json(film);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
