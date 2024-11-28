@@ -1,6 +1,6 @@
 .catalogue {
     width: 100%;
-    height: 80vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,9 @@
 }
 
 .h2Catalogue {
-    font-size: 30px;
+    font-size: 2rem;
+    display: flex;
+    
 }
 
 .film:hover{
@@ -49,12 +51,10 @@
 }
 
 .pagination {
-    position: absolute;
-    bottom: 0;
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding-bottom: 10%;
+    margin-bottom: 10px;
 }
 
 .pagination button {
@@ -72,12 +72,5 @@
 
 .pagination button:hover {
     background-color: #ddd;
-}
-
-.h2Catalogue {
-    position: absolute;
-    top: 0;
-    padding-top: 8%;
-    width: 100%;
-    text-align: center;
+    color:black;
 }

@@ -45,7 +45,8 @@ const RandomFilm = () => {
                     <div className="containerInformationFR">
                         <p className="nomFR">{selectedFilm.Nom}</p>
                         <p className="dateFR">{selectedFilm.Annee} - {selectedFilm.Duree} - {selectedFilm.classification}</p>
-                        <p className="noteFR">Note: {selectedFilm.Note} {selectedFilm.Voteur} - Metascore: {selectedFilm.NoteMeta}</p>
+                        <p className="noteFR">Note: {selectedFilm.Note} {selectedFilm.Voteur}</p>
+                        <p className="noteFR">Metascore: {selectedFilm.NoteMeta}</p>
                         <p className="auteurFR">De: {selectedFilm.Realisateur}</p>
                         <p className="acteurFR">Acteurs: {selectedFilm.Acteur1}, {selectedFilm.Acteur2}, {selectedFilm.Acteur3}</p>
                     </div>
