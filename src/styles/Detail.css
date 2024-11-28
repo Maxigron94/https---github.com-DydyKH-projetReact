@@ -36,6 +36,7 @@
 }
 
 .container-filmInformation{
+    max-width: 80%;
     border:2px solid white;
     display:flex;
     flex-wrap: wrap;
@@ -79,7 +80,7 @@
 .container-synopsisInformation{
     /* border:1px solid red; */
     margin-top: 11%;
-    width: 100%;
+    
 }
 
 .container-synopsisInformation p {
