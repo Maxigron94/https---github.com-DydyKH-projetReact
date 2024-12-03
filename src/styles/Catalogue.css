@@ -74,3 +74,10 @@
     background-color: #ddd;
     color:black;
 }
+
+@media only screen and (min-width: 1600px) {
+    .catalogue {
+        height: 80vh;
+    }
+
+}
