@@ -12,7 +12,7 @@ function Catalogue() {
     useEffect(() => {
         const fetchFilms = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/films?index=${currentPage}`);
+                const response = await axios.get(`https://https-github-com-dydykh-projetreact.onrender.com/api/films?index=${currentPage}`);
                 setFilms(response.data);
             } catch (error) {
                 console.error("Erreur lors de la récupération des films:", error);

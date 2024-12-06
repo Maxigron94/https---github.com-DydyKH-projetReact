@@ -9,7 +9,7 @@ const RandomFilm = () => {
     // Fonction pour récupérer un film aléatoire
     const getRandomFilm = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/FilmRandom');
+            const response = await axios.get(' https://https-github-com-dydykh-projetreact.onrender.com/api/FilmRandom');
             setSelectedFilm(response.data);
         } catch (error) {
             console.error('Error fetching the random film:', error);
@@ -24,8 +24,8 @@ const RandomFilm = () => {
     return (
         <div className="containerFRP">
             <div className="containerFRTitre">
-                <h1>Top 50 des films incontournable</h1>
-                <p>Une collection a ne pas manquer !</p>
+                <h1>Top 50 des films incontournables</h1>
+                <p>Une collection à ne pas manquer !</p>
             </div>
             <div className="containerFRSectionRandom">
                 <div className="containerFRB"> 

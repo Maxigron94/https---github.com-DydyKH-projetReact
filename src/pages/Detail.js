@@ -12,7 +12,7 @@ function Detail() {
     useEffect(() => {
         const fetchFilm = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/films/${id}`);
+                const response = await axios.get(`https://https-github-com-dydykh-projetreact.onrender.com/api/films/${id}`);
                 setFilm(response.data);
             } catch (error) {
                 console.error("Erreur lors de la récupération du film:", error);
